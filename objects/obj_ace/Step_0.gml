@@ -16,6 +16,15 @@ if (can_jump == 1) //can only jump when you are able to
 var _xinput = rightKey - leftKey;
 var _yinput = has_gravity - jump //jump with gravity
 
+if (_xinput != 0)
+{
+	image_speed = 1 * x_moveSpeed/2;
+}
+else 
+{
+	image_speed = 0;
+}
+
 //apply gravity
 if (has_gravity == 1)
 {
@@ -63,12 +72,52 @@ if (jumpTimer == 0 && can_jump == 0)
 	jump = 0; // and jump input is removed
 }
 
-
+//border detection on the left side
 if (place_meeting(x-1, y, obj_border))
 {
-	x += 2;
 	canMoveLeft = false;
+	leftKey = 0;
 }
-else 
+else
+{
 	canMoveLeft = true;
+}
+
+//border detection on the right side
+if (place_meeting(x+1, y, obj_border))
+{
+	canMoveRight = false;
+	rightKey = 0;
+}
+else
+{
+	canMoveRight = true;
+}
+
+var temp_jump = can_jump;
+if (place_meeting(x, y-1, obj_border))
+{
+	can_jump = 0;
+}
+else
+{
+	can_jump = temp_jump;
+}
+
+
+if (distance_to_object(obj_passive_card) < 2) 
+{
+	var nearestCard = instance_nearest(x, y, obj_passive_card)
+	with (nearestCard) {
+		event_user(0);
+	}
+}
+
+if (distance_to_object(obj_active_card) < 2) 
+{
+	var nearestCard = instance_nearest(x, y, obj_active_card)
+	with (nearestCard) {
+		event_user(0);
+	}
+}
 

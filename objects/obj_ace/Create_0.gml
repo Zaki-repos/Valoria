@@ -4,7 +4,7 @@ canCrouch = false;
 
 
 //jump vars
-jumpSpeed = 6;
+jumpSpeed = 8;
 jumpHoldFrames = 15;
 jumpTimer = 0;
 
