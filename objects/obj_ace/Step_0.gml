@@ -104,6 +104,15 @@ else
 	can_jump = temp_jump;
 }
 
+if (!canMoveLeft)
+{
+	x += 3;
+}
+else if (!canMoveRight)
+{
+	x -= 3;
+}
+
 
 if (distance_to_object(obj_passive_card) < 2) 
 {

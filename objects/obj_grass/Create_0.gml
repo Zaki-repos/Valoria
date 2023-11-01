@@ -1,3 +1,2 @@
-/// @description Insert description here
-// You can write your code in this editor
-image_speed = irandom_range(3,4);
+image_index = irandom_range(0,14);
+image_speed = 3;
