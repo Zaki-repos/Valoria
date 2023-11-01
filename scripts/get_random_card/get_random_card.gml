@@ -1,6 +1,15 @@
 //generate the card type
-gml_pragma("global", "get_random_card()");
 random_set_seed(current_time);
+
+//player stats
+health = 100; //base health
+global.maxHealth = 100;
+
+global.x_moveSpeed = 3; //movement X speed
+global.y_moveSpeed = 3; //movement Y speed
+global.attackMultiplier = 1; //any attack is multiplied by this value
+global.defenseMultiplier = 1; //any incoming damage is multiplied this value
+global.cooldownReduction = 1; //should be above zero, changes cooldown speed
 
 enum cards 
 {
@@ -18,38 +27,39 @@ enum cards
 	MovementDown
 }
 
-	global.cardDesign = 
-	[
-		spr_card, // the card design from the rear (hidden card)
-		spr_active_slash //active card - slash
-	]
+global.cardDesign = 
+[
+	spr_card, // the card design from the rear (hidden card)
+	spr_active_slash //active card - slash
+]
 
-	//legend [cardtype, card descr, imageIndex, function]
-	global.passiveCards = 
-	[
-		//attack cards
-		[cards.AttackUp, "Attacking Increased", 0, incAttack()],
-		[cards.AttackDown, "Attacking Decreased", 0, decAttack()],
-		[cards.DefenseUp, "Defense Increased", 0, incDefense()],
-		[cards.DefenseDown, "Defense Decreased", 0, decDefense()],
-		[cards.CooldownUp, "Cooldown Improved", 0, impCooldown()],
-		[cards.CooldownDown, "Cooldown Worsened", 0, worseCooldown()],
-		[cards.HealthUp, "Health Up", 0, incHealth()],
-		[cards.HealthDown, "Health Down", 0, decHealth()],
-		[cards.MaxHealthUp, "Max Health Increased", 0, incMaxHealth()],
-		[cards.MaxHealthDown, "Max Health Decreased", 0, decMaxHealth()],
-		[cards.MovementUp, "Movement Increased", 0, incMovement()],
-		[cards.MovementDown, "Movement Decreased", 0, decMovement()]
-	]
+//legend [cardtype, card descr, imageIndex, function]
+global.passiveCards = 
+[
+	//attack cards
+		
+	/**[cards.AttackUp, "Attacking Increased", 0],
+	[cards.AttackDown, "Attacking Decreased", 0],
+	[cards.DefenseUp, "Defense Increased", 0],
+	[cards.DefenseDown, "Defense Decreased", 0],
+	[cards.CooldownUp, "Cooldown Improved", 0],
+	[cards.CooldownDown, "Cooldown Worsened", 0],
+	[cards.HealthUp, "Health Up", 0, incHealth()],
+	[cards.HealthDown, "Health Down", 0],**/
+	[cards.MaxHealthUp, "Max Health Increased", 0],
+	[cards.MaxHealthDown, "Max Health Decreased", 0]/**,
+	[cards.MovementUp, "Movement Increased", 0],
+	[cards.MovementDown, "Movement Decreased", 0]***/
+]
 
-	global.num_passive_cards = array_length(global.passiveCards);
+global.num_passive_cards = array_length(global.passiveCards);
 	
-	global.activeCards = 
-	[
-		["You received Slash", 1, slash()]
-	]
+global.activeCards = 
+[
+	["You received Slash", 1, slash()]
+]
 	
-	global.num_active_cards = array_length(global.activeCards);
+global.num_active_cards = array_length(global.activeCards);
 
 function getRandomCard()
 {	
@@ -72,15 +82,15 @@ function incAttack()
 	var rarityChance = irandom_range(1, 100);
 	if (rarityChance > 90) // + 15%
 	{
-		obj_ace.attackMultiplier += obj_ace.attackMultiplier * 0.15;
+		global.attackMultiplier += global.attackMultiplier * 0.15;
 	}
 	else if (rarityChance > 70) // + 10%
 	{
-		obj_ace.attackMultiplier += obj_ace.attackMultiplier * 0.10;
+		global.attackMultiplier += global.attackMultiplier * 0.10;
 	}
 	else // +5%
 	{
-		obj_ace.attackMultiplier += obj_ace.attackMultiplier * 0.05;
+		global.attackMultiplier += global.attackMultiplier * 0.05;
 	}
 }
 
@@ -89,15 +99,15 @@ function decAttack()
 	var rarityChance = irandom_range(1, 100);
 	if (rarityChance > 90) // - 15%
 	{
-		obj_ace.attackMultiplier -= obj_ace.attackMultiplier * 0.15;
+		global.attackMultiplier -= global.attackMultiplier * 0.15;
 	}
 	else if (rarityChance > 70) // - 10%
 	{
-		obj_ace.attackMultiplier -= obj_ace.attackMultiplier * 0.10;
+		global.attackMultiplier -= global.attackMultiplier * 0.10;
 	}
 	else // -5%
 	{
-		obj_ace.attackMultiplier -= obj_ace.attackMultiplier * 0.05;
+		global.attackMultiplier -= global.attackMultiplier * 0.05;
 	}
 }
 
@@ -106,15 +116,15 @@ function incDefense()
 	var rarityChance = irandom_range(1, 100);
 	if (rarityChance > 90) // + 15%
 	{
-		obj_ace.defenseMultiplier += obj_ace.defenseMultiplier * 0.15;
+		global.defenseMultiplier += global.defenseMultiplier * 0.15;
 	}
 	else if (rarityChance > 70) // + 10%
 	{
-		obj_ace.defenseMultiplier += obj_ace.defenseMultiplier * 0.10;
+		global.defenseMultiplier += global.defenseMultiplier * 0.10;
 	}
 	else // +5%
 	{
-		obj_ace.defenseMultiplier += obj_ace.defenseMultiplier * 0.05;
+		global.defenseMultiplier += global.defenseMultiplier * 0.05;
 	}
 }
 
@@ -123,15 +133,15 @@ function decDefense()
 	var rarityChance = irandom_range(1, 100);
 	if (rarityChance > 90) // - 15%
 	{
-		obj_ace.defenseMultiplier -= obj_ace.defenseMultiplier * 0.15;
+		global.defenseMultiplier -= global.defenseMultiplier * 0.15;
 	}
 	else if (rarityChance > 70) // - 10%
 	{
-		obj_ace.defenseMultiplier -= obj_ace.defenseMultiplier * 0.10;
+		global.defenseMultiplier -= global.defenseMultiplier * 0.10;
 	}
 	else // -5%
 	{
-		obj_ace.defenseMultiplier -= obj_ace.defenseMultiplier * 0.05;
+		global.defenseMultiplier -= global.defenseMultiplier * 0.05;
 	}
 }
 
@@ -140,15 +150,15 @@ function impCooldown() //cooldownReduction
 	var rarityChance = irandom_range(1, 100);
 	if (rarityChance > 90) // + 15%
 	{
-		obj_ace.cooldownReduction += obj_ace.cooldownReduction * 0.15;
+		global.cooldownReduction += global.cooldownReduction * 0.15;
 	}
 	else if (rarityChance > 70) // + 10%
 	{
-		obj_ace.cooldownReduction += obj_ace.cooldownReduction * 0.10;
+		global.cooldownReduction += global.cooldownReduction * 0.10;
 	}
 	else // +5%
 	{
-		obj_ace.cooldownReduction += obj_ace.cooldownReduction * 0.05;
+		global.cooldownReduction += global.cooldownReduction * 0.05;
 	}
 }
 
@@ -157,15 +167,15 @@ function worseCooldown()
 	var rarityChance = irandom_range(1, 100);
 	if (rarityChance > 90) // - 15%
 	{
-		obj_ace.cooldownReduction -= obj_ace.cooldownReduction * 0.15;
+		global.cooldownReduction -= global.cooldownReduction * 0.15;
 	}
 	else if (rarityChance > 70) // - 10%
 	{
-		obj_ace.cooldownReduction -= obj_ace.cooldownReduction * 0.10;
+		global.cooldownReduction -= global.cooldownReduction * 0.10;
 	}
 	else // -5%
 	{
-		obj_ace.cooldownReduction -= obj_ace.cooldownReduction * 0.05;
+		global.cooldownReduction -= global.cooldownReduction * 0.05;
 	}
 }
 function incHealth() 
@@ -187,8 +197,8 @@ function incHealth()
 	//keeps health at integer
 	health = round(health);
 	// correct overhealth and prevent health bar from overload
-	if (health > 100)
-	{health = 100;}
+	if (health > global.maxHealth)
+	{health = global.maxHealth;}
 	
 }
 function decHealth() 
@@ -228,36 +238,42 @@ function incMaxHealth()
 	var rarityChance = irandom_range(1, 100);
 	if (rarityChance > 90) // + 15%
 	{
-		obj_ace.maxHealth += obj_ace.maxHealth * 0.15;
+		global.maxHealth += global.maxHealth * 0.15;
 	}
 	else if (rarityChance > 70) // + 10%
 	{
-		obj_ace.maxHealth += obj_ace.maxHealth * 0.10;
+		global.maxHealth += global.maxHealth * 0.10;
 	}
 	else // +5%
 	{
-		obj_ace.maxHealth += obj_ace.maxHealth * 0.05;
+		global.maxHealth += global.maxHealth * 0.05;
 	}
 	
-	obj_ace.maxHealth = round(obj_ace.maxHealth);
+	//round up health
+	global.maxHealth = ceil(global.maxHealth);
 }
 function decMaxHealth() 
 {
 	var rarityChance = irandom_range(1, 100);
 	if (rarityChance > 90) // +-15%
 	{
-		obj_ace.maxHealth -= obj_ace.maxHealth * 0.15;
+		global.maxHealth -= global.maxHealth * 0.15;
 	}
 	else if (rarityChance > 70) // - 10%
 	{
-		obj_ace.maxHealth -= obj_ace.maxHealth * 0.10;
+		global.maxHealth -= global.maxHealth * 0.10;
 	}
 	else // -5%
 	{
-		obj_ace.maxHealth -= obj_ace.maxHealth * 0.05;
+		global.maxHealth -= global.maxHealth * 0.05;
 	}
 	
-	obj_ace.maxHealth = round(obj_ace.maxHealth);
+	//prevents having more health than intended
+	if (health > global.maxHealth)
+	{health = global.maxHealth;}
+	
+	//round up health
+	global.maxHealth = ceil(global.maxHealth);
 }
 
 
@@ -266,15 +282,15 @@ function incMovement()
 	var rarityChance = irandom_range(1, 100);
 	if (rarityChance > 90) // + 15%
 	{
-		obj_ace.x_moveSpeed += obj_ace.x_moveSpeed * 0.15;
+		global.x_moveSpeed += global.x_moveSpeed * 0.15;
 	}
 	else if (rarityChance > 70) // + 10%
 	{
-		obj_ace.x_moveSpeed += obj_ace.x_moveSpeed * 0.10;
+		global.x_moveSpeed += global.x_moveSpeed * 0.10;
 	}
 	else // +5%
 	{
-		obj_ace.x_moveSpeed += obj_ace.x_moveSpeed * 0.05;
+		global.x_moveSpeed += global.x_moveSpeed * 0.05;
 	}
 }
 
@@ -283,15 +299,15 @@ function decMovement()
 	var rarityChance = irandom_range(1, 100);
 	if (rarityChance > 90) // - 15%
 	{
-		obj_ace.x_moveSpeed -= obj_ace.x_moveSpeed * 0.15;
+		global.x_moveSpeed -= global.x_moveSpeed * 0.15;
 	}
 	else if (rarityChance > 70) // - 10%
 	{
-		obj_ace.x_moveSpeed -= obj_ace.x_moveSpeed * 0.10;
+		global.x_moveSpeed -= global.x_moveSpeed * 0.10;
 	}
 	else // -5%
 	{
-		obj_ace.x_moveSpeed -= obj_ace.x_moveSpeed * 0.05;
+		global.x_moveSpeed -= global.x_moveSpeed * 0.05;
 	}
 }
 

@@ -18,7 +18,7 @@ var _yinput = has_gravity - jump //jump with gravity
 
 if (_xinput != 0)
 {
-	image_speed = 1 * x_moveSpeed/2;
+	image_speed = 1 * global.x_moveSpeed/2;
 }
 else 
 {
@@ -28,11 +28,11 @@ else
 //apply gravity
 if (has_gravity == 1)
 {
-	y_moveSpeed = player_gravity;
+	global.y_moveSpeed = player_gravity;
 }
 
 //movement input and avoid obj
-move_and_collide(_xinput * x_moveSpeed, _yinput * y_moveSpeed, obj_road);
+move_and_collide(_xinput * global.x_moveSpeed, _yinput * global.y_moveSpeed, obj_road);
 
 
 //ground check
@@ -62,7 +62,7 @@ if (jumpKey)
 //jump length
 if (jumpTimer > 0)
 {
-	y_moveSpeed = jumpSpeed; //changes movement speed;
+	global.y_moveSpeed = jumpSpeed; //changes movement speed;
 	jumpTimer--; //decreases timer
 }
 
