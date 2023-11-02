@@ -30,7 +30,7 @@ enum cards
 global.cardDesign = 
 [
 	spr_card, // the card design from the rear (hidden card)
-	spr_active_slash //active card - slash
+	spr_design_slash//active card - slash
 ]
 
 //legend [cardtype, card descr, imageIndex, function]
@@ -38,18 +38,18 @@ global.passiveCards =
 [
 	//attack cards
 		
-	/**[cards.AttackUp, "Attacking Increased", 0],
+	[cards.AttackUp, "Attacking Increased", 0],
 	[cards.AttackDown, "Attacking Decreased", 0],
 	[cards.DefenseUp, "Defense Increased", 0],
 	[cards.DefenseDown, "Defense Decreased", 0],
 	[cards.CooldownUp, "Cooldown Improved", 0],
 	[cards.CooldownDown, "Cooldown Worsened", 0],
 	[cards.HealthUp, "Health Up", 0, incHealth()],
-	[cards.HealthDown, "Health Down", 0],**/
+	[cards.HealthDown, "Health Down", 0],
 	[cards.MaxHealthUp, "Max Health Increased", 0],
-	[cards.MaxHealthDown, "Max Health Decreased", 0]/**,
+	[cards.MaxHealthDown, "Max Health Decreased", 0],
 	[cards.MovementUp, "Movement Increased", 0],
-	[cards.MovementDown, "Movement Decreased", 0]***/
+	[cards.MovementDown, "Movement Decreased", 0]
 ]
 
 global.num_passive_cards = array_length(global.passiveCards);

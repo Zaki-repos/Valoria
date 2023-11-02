@@ -1,11 +1,15 @@
 /// @description Insert description here
 // You can write your code in this editor
-visible = false;
+obj_ace.numPassiveCards += 1;
+
+visible = false
 x = -10;
 y = -10;
 
-obj_game_controller.pop_text = pop_up;
+//changes the pop up
+obj_HUD_controller.pop_text = pop_up;
 
+//determines the action to perform based on the type
 switch(cardType)
 {
 	case cards.AttackUp:
@@ -44,5 +48,4 @@ switch(cardType)
 	case cards.MovementDown:
 		decMovement();
 	break;
-	
 }
