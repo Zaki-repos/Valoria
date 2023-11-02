@@ -1,16 +1,6 @@
 //generate the card type
 random_set_seed(current_time);
 
-//player stats
-health = 100; //base health
-global.maxHealth = 100;
-
-global.x_moveSpeed = 3; //movement X speed
-global.y_moveSpeed = 3; //movement Y speed
-global.attackMultiplier = 1; //any attack is multiplied by this value
-global.defenseMultiplier = 1; //any incoming damage is multiplied this value
-global.cooldownReduction = 1; //should be above zero, changes cooldown speed
-
 enum cards 
 {
 	AttackUp,
@@ -25,6 +15,11 @@ enum cards
 	MaxHealthDown,
 	MovementUp,
 	MovementDown
+}
+
+enum items
+{
+	Slash
 }
 
 global.cardDesign = 
@@ -44,7 +39,7 @@ global.passiveCards =
 	[cards.DefenseDown, "Defense Decreased", 0],
 	[cards.CooldownUp, "Cooldown Improved", 0],
 	[cards.CooldownDown, "Cooldown Worsened", 0],
-	[cards.HealthUp, "Health Up", 0, incHealth()],
+	[cards.HealthUp, "Health Up", 0],
 	[cards.HealthDown, "Health Down", 0],
 	[cards.MaxHealthUp, "Max Health Increased", 0],
 	[cards.MaxHealthDown, "Max Health Decreased", 0],
@@ -56,7 +51,7 @@ global.num_passive_cards = array_length(global.passiveCards);
 	
 global.activeCards = 
 [
-	["You received Slash", 1, slash()]
+	[items.Slash, "You received Slash", 1]
 ]
 	
 global.num_active_cards = array_length(global.activeCards);
