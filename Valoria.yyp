@@ -42,15 +42,17 @@
   "isEcma": false,
   "LibraryEmitters": [],
   "MetaData": {
-    "IDEVersion": "2023.6.0.92",
+    "IDEVersion": "2023.8.1.102",
   },
   "resources": [
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"spr_road","path":"sprites/spr_road/spr_road.yy",},},
+    {"id":{"name":"spr_popup_temp","path":"sprites/spr_popup_temp/spr_popup_temp.yy",},},
     {"id":{"name":"spr_pedestal","path":"sprites/spr_pedestal/spr_pedestal.yy",},},
     {"id":{"name":"spr_card","path":"sprites/spr_card/spr_card.yy",},},
     {"id":{"name":"spr_greenbar","path":"sprites/spr_greenbar/spr_greenbar.yy",},},
     {"id":{"name":"spr_border","path":"sprites/spr_border/spr_border.yy",},},
+    {"id":{"name":"LombardicFont","path":"fonts/LombardicFont/LombardicFont.yy",},},
     {"id":{"name":"spr_Ace_Animation","path":"sprites/spr_Ace_Animation/spr_Ace_Animation.yy",},},
     {"id":{"name":"get_random_card","path":"scripts/get_random_card/get_random_card.yy",},},
     {"id":{"name":"obj_border","path":"objects/obj_border/obj_border.yy",},},
@@ -70,11 +72,13 @@
     {"id":{"name":"spr_grass","path":"sprites/spr_grass/spr_grass.yy",},},
     {"id":{"name":"obj_active_card","path":"objects/obj_active_card/obj_active_card.yy",},},
     {"id":{"name":"spr_selected_slot","path":"sprites/spr_selected_slot/spr_selected_slot.yy",},},
+    {"id":{"name":"hud_popups","path":"objects/hud_popups/hud_popups.yy",},},
     {"id":{"name":"obj_ace","path":"objects/obj_ace/obj_ace.yy",},},
   ],
   "RoomOrderNodes": [
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
   ],
+  "templateType": null,
   "TextureGroups": [
     {"resourceType":"GMTextureGroup","resourceVersion":"1.3","name":"Default","autocrop":true,"border":2,"compressFormat":"bz2","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"targets":-1,},
   ],

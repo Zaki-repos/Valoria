@@ -73,7 +73,7 @@ if (jumpTimer == 0 && can_jump == 0)
 }
 
 //border detection on the left side
-if (place_meeting(x-1, y, obj_border))
+if (place_meeting(x-2, y, obj_border))
 {
 	canMoveLeft = false;
 	leftKey = 0;
@@ -84,7 +84,7 @@ else
 }
 
 //border detection on the right side, prevents 'sticking'
-if (place_meeting(x+1, y, obj_border))
+if (place_meeting(x+2, y, obj_border))
 {
 	canMoveRight = false;
 	rightKey = 0;
@@ -99,7 +99,7 @@ if (!canMoveLeft)
 {
 	x += 3;
 }
-else if (!canMoveRight)
+if (!canMoveRight)
 {
 	x -= 3;
 }
@@ -108,23 +108,6 @@ else if (!canMoveRight)
 if (distance_to_object(obj_passive_card) < 2) 
 {
 	var nearestCard = instance_nearest(x, y, obj_passive_card)
-	with (nearestCard) {
-		event_user(0);
-	}
-}
-
-//picks up active card
-if (distance_to_object(obj_active_card) < 2 && numActiveCards < 5) 
-{
-	//trigger card event
-	var nearestCard = instance_nearest(x, y, obj_active_card)
-	
-	if (card_number_one == pointer_null) {card_number_one = nearestCard}
-	else if (card_number_two == pointer_null) {card_number_two = nearestCard}
-	else if (card_number_three == pointer_null) {card_number_three = nearestCard}
-	else if (card_number_four == pointer_null) {card_number_four = nearestCard}
-	else if (card_number_five == pointer_null) {card_number_five = nearestCard}
-	
 	with (nearestCard) {
 		event_user(0);
 	}

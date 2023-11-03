@@ -1,13 +1,12 @@
-/// @description Insert description here
-// You can write your code in this editor
-obj_ace.numPassiveCards += 1;
-
+//hides the card; moves off screen; adds to num passive cards
 visible = false
 x = -10;
 y = -10;
+obj_ace.numPassiveCards += 1;
 
-//changes the pop up
-obj_HUD_controller.pop_text = pop_up;
+//creates a pop-up
+var hud_pop_up = instance_create_layer(-50, -50, "HUD", hud_popups);
+hud_pop_up.pop_up = pop_up;
 
 //determines the action to perform based on the type
 switch(cardType)
