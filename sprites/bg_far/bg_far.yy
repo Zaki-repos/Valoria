@@ -2,9 +2,9 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "bg_far",
-  "bbox_bottom": 223,
+  "bbox_bottom": 767,
   "bbox_left": 0,
-  "bbox_right": 383,
+  "bbox_right": 1343,
   "bbox_top": 0,
   "bboxMode": 0,
   "collisionKind": 1,
@@ -13,14 +13,14 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1a3815c5-4fa9-479d-a4f3-6fd741a327be",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d0ada18b-e229-457a-9920-b425a739a982",},
   ],
   "gridX": 0,
   "gridY": 0,
-  "height": 224,
+  "height": 768,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"033c223e-ef8e-4474-a0a2-a256728c7508","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"bf93dc4a-0ca3-4c94-b571-6b28dca541cb","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 0,
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"1a3815c5-4fa9-479d-a4f3-6fd741a327be","path":"sprites/bg_far/bg_far.yy",},},},"Disabled":false,"id":"e28eb041-44fd-4793-b0b4-7dc44a4f2626","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"d0ada18b-e229-457a-9920-b425a739a982","path":"sprites/bg_far/bg_far.yy",},},},"Disabled":false,"id":"2923a488-0e66-4498-bd42-8ea398e7aa64","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
@@ -70,5 +70,5 @@
   },
   "type": 0,
   "VTile": false,
-  "width": 384,
+  "width": 1344,
 }

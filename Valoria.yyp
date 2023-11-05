@@ -37,12 +37,14 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Ace_Animation","folderPath":"folders/Sprites/Player/Ace_Animation.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Tile Sets","folderPath":"folders/Tile Sets.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Timelines","folderPath":"folders/Timelines.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Enemies","folderPath":"folders/Objects/Enemies.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Enemies","folderPath":"folders/Sprites/Enemies.yy",},
   ],
   "IncludedFiles": [],
   "isEcma": false,
   "LibraryEmitters": [],
   "MetaData": {
-    "IDEVersion": "2023.8.1.102",
+    "IDEVersion": "2023.6.0.92",
   },
   "resources": [
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
@@ -63,6 +65,8 @@
     {"id":{"name":"bg_far","path":"sprites/bg_far/bg_far.yy",},},
     {"id":{"name":"obj_grass","path":"objects/obj_grass/obj_grass.yy",},},
     {"id":{"name":"spr_Ace","path":"sprites/spr_Ace/spr_Ace.yy",},},
+    {"id":{"name":"obj_rock","path":"objects/obj_rock/obj_rock.yy",},},
+    {"id":{"name":"spr_rock","path":"sprites/spr_rock/spr_rock.yy",},},
     {"id":{"name":"spr_design_slash","path":"sprites/spr_design_slash/spr_design_slash.yy",},},
     {"id":{"name":"obj_debug_screen","path":"objects/obj_debug_screen/obj_debug_screen.yy",},},
     {"id":{"name":"obj_passive_card","path":"objects/obj_passive_card/obj_passive_card.yy",},},
@@ -78,7 +82,6 @@
   "RoomOrderNodes": [
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
   ],
-  "templateType": null,
   "TextureGroups": [
     {"resourceType":"GMTextureGroup","resourceVersion":"1.3","name":"Default","autocrop":true,"border":2,"compressFormat":"bz2","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"targets":-1,},
   ],

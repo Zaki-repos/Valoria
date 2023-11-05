@@ -26,6 +26,8 @@
     {"name":"Ace_Animation","order":1,"path":"folders/Sprites/Player/Ace_Animation.yy",},
     {"name":"Tile Sets","order":2,"path":"folders/Tile Sets.yy",},
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
+    {"name":"Enemies","order":11,"path":"folders/Objects/Enemies.yy",},
+    {"name":"Enemies","order":10,"path":"folders/Sprites/Enemies.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"spr_road","order":2,"path":"sprites/spr_road/spr_road.yy",},
@@ -36,6 +38,8 @@
     {"name":"bg_forest","order":1,"path":"sprites/bg_forest/bg_forest.yy",},
     {"name":"obj_HUD_controller","order":3,"path":"objects/obj_HUD_controller/obj_HUD_controller.yy",},
     {"name":"obj_grass","order":2,"path":"objects/obj_grass/obj_grass.yy",},
+    {"name":"obj_rock","order":4,"path":"objects/obj_rock/obj_rock.yy",},
+    {"name":"spr_rock","order":4,"path":"sprites/spr_rock/spr_rock.yy",},
     {"name":"spr_healthbar","order":1,"path":"sprites/spr_healthbar/spr_healthbar.yy",},
     {"name":"obj_road","order":1,"path":"objects/obj_road/obj_road.yy",},
     {"name":"obj_pedestal","order":3,"path":"objects/obj_pedestal/obj_pedestal.yy",},
