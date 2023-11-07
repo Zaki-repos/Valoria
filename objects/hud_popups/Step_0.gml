@@ -6,3 +6,16 @@ if (place_meeting(x, y+16, hud_popups))
 	above_text.y_pos += 15;
 	above_text.y -= 16;
 }
+
+//sets the timer and displays text
+if (!displayText)
+{
+	displayTimer = displayHoldFrame;
+	displayText = true;
+}
+
+//destroys the popup
+if (displayTimer <= 0)
+{
+	instance_destroy();
+}

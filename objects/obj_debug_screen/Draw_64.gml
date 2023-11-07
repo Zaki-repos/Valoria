@@ -15,3 +15,6 @@ draw_text(1050, 10, "X: " + string(obj_ace.x) + " Y: " + string(obj_ace.y) + "\n
 			"Num A-Cards: " + string(obj_ace.numActiveCards) + "\n"
 			);
 			
+draw_text(1050, 400, "X: " + string(obj_sprout.x) + " Y :" + string(obj_sprout.y) + "\n" + 
+					"spawnpos: " + string(obj_sprout.spawn_pos)
+					);

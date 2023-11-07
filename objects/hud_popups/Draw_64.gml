@@ -1,13 +1,6 @@
 //sets the font
 draw_set_font(LombardicFont);
 
-//sets the timer and displays text
-if (!displayText)
-{
-	displayTimer = displayHoldFrame;
-	displayText = true;
-}
-
 //animates the description to rise
 if (displayTimer > 0)
 {
@@ -24,9 +17,3 @@ if (displayTimer > 0)
 	draw_set_halign(0)
 }
 draw_set_font(-1);
-
-//destroys the popup
-if (displayTimer <= 0)
-{
-	instance_destroy();
-}
