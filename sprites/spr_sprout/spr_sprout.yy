@@ -28,8 +28,8 @@
   "nineSlice": null,
   "origin": 4,
   "parent": {
-    "name": "Enemies",
-    "path": "folders/Sprites/Enemies.yy",
+    "name": "Walking Animation",
+    "path": "folders/Sprites/Enemies/spout/Walking Animation.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

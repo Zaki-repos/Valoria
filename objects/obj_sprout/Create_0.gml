@@ -7,7 +7,9 @@ sprout_health = 20;
 sprout_dmg = 2;
 sprout_movement_speed = 1;
 
+is_alerted = false;
 is_attacking = false;
+direction_facing = 0;
 spawn_pos = x;
 x_input = 0;
 

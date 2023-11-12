@@ -17,6 +17,8 @@ draw_set_color(c_black);
 			
 draw_text(1050, 10, "X: " + string(obj_sprout.x) + " Y :" + string(obj_sprout.y) + "\n" + 
 					"spawnpos: " + string(obj_sprout.spawn_pos) + "\n" +
+					"is alerted: " + string(obj_sprout.is_alerted) + "\n" +
 					"is attacking: " + string(obj_sprout.is_attacking) + "\n" +
-					"speed: " + string(obj_sprout.speed)
+					"speed: " + string(obj_sprout.speed) + "\n" + 
+					"direction: " + string (obj_sprout.direction)
 					);

@@ -28,6 +28,9 @@
     {"name":"Ace_Animation","order":1,"path":"folders/Sprites/Player/Ace_Animation.yy",},
     {"name":"Tile Sets","order":2,"path":"folders/Tile Sets.yy",},
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
+    {"name":"spout","order":1,"path":"folders/Sprites/Enemies/spout.yy",},
+    {"name":"Attacking Animation","order":1,"path":"folders/Sprites/Enemies/spout/Attacking Animation.yy",},
+    {"name":"Walking Animation","order":2,"path":"folders/Sprites/Enemies/spout/Walking Animation.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"spr_road","order":2,"path":"sprites/spr_road/spr_road.yy",},

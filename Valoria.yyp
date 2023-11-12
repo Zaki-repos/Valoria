@@ -39,12 +39,15 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Ace_Animation","folderPath":"folders/Sprites/Player/Ace_Animation.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Tile Sets","folderPath":"folders/Tile Sets.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Timelines","folderPath":"folders/Timelines.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"spout","folderPath":"folders/Sprites/Enemies/spout.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Attacking Animation","folderPath":"folders/Sprites/Enemies/spout/Attacking Animation.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Walking Animation","folderPath":"folders/Sprites/Enemies/spout/Walking Animation.yy",},
   ],
   "IncludedFiles": [],
   "isEcma": false,
   "LibraryEmitters": [],
   "MetaData": {
-    "IDEVersion": "2023.8.1.102",
+    "IDEVersion": "2023.6.0.92",
   },
   "resources": [
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
@@ -59,6 +62,7 @@
     {"id":{"name":"obj_sprout","path":"objects/obj_sprout/obj_sprout.yy",},},
     {"id":{"name":"spr_Ace_Animation","path":"sprites/spr_Ace_Animation/spr_Ace_Animation.yy",},},
     {"id":{"name":"get_random_card","path":"scripts/get_random_card/get_random_card.yy",},},
+    {"id":{"name":"spr_spout_attack","path":"sprites/spr_spout_attack/spr_spout_attack.yy",},},
     {"id":{"name":"obj_border","path":"objects/obj_border/obj_border.yy",},},
     {"id":{"name":"obj_game_controller","path":"objects/obj_game_controller/obj_game_controller.yy",},},
     {"id":{"name":"bg_forest","path":"sprites/bg_forest/bg_forest.yy",},},
@@ -84,7 +88,6 @@
   "RoomOrderNodes": [
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
   ],
-  "templateType": null,
   "TextureGroups": [
     {"resourceType":"GMTextureGroup","resourceVersion":"1.3","name":"Default","autocrop":true,"border":2,"compressFormat":"bz2","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"targets":-1,},
   ],
