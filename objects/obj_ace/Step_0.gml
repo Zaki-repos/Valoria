@@ -18,6 +18,7 @@ var _yinput = has_gravity - jump //jump with gravity
 
 if (_xinput != 0)
 {
+	sprite_index = spr_ace_walking
 	image_speed = 1 * global.x_moveSpeed/2;
 }
 else 
@@ -113,3 +114,15 @@ if (distance_to_object(obj_passive_card) < 2)
 	}
 }
 
+if (_xinput < 0)
+{
+	image_xscale = -1;
+}
+else if (_xinput > 0)
+{
+	image_xscale = 1;
+}
+else
+{
+	sprite_index = spr_Ace_Animation;
+}

@@ -38,6 +38,7 @@
     {"name":"spr_pedestal","order":3,"path":"sprites/spr_pedestal/spr_pedestal.yy",},
     {"name":"spr_greenbar","order":3,"path":"sprites/spr_greenbar/spr_greenbar.yy",},
     {"name":"obj_game_controller","order":1,"path":"objects/obj_game_controller/obj_game_controller.yy",},
+    {"name":"spr_ace_walking","order":2,"path":"sprites/spr_ace_walking/spr_ace_walking.yy",},
     {"name":"bg_forest","order":1,"path":"sprites/bg_forest/bg_forest.yy",},
     {"name":"obj_HUD_controller","order":3,"path":"objects/obj_HUD_controller/obj_HUD_controller.yy",},
     {"name":"obj_grass","order":2,"path":"objects/obj_grass/obj_grass.yy",},
