@@ -28,7 +28,7 @@ global.cardDesign =
 	spr_design_slash//active card - slash
 ]
 
-//legend [cardtype, card descr, imageIndex, function]
+//legend [cardtype, card descr, imageIndex]
 global.passiveCards = 
 [
 	//attack cards
@@ -48,10 +48,11 @@ global.passiveCards =
 ]
 
 global.num_passive_cards = array_length(global.passiveCards);
-	
+
+//legend [cardtype, card descr, imageIndex, cooldown]
 global.activeCards = 
 [
-	[items.Slash, "You received Slash", 1]
+	[items.Slash, "You received Slash", 1, 1]
 ]
 	
 global.num_active_cards = array_length(global.activeCards);

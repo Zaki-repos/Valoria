@@ -24,3 +24,26 @@ else if (five_key)
 {
 	hotbar_offset = 95;
 }
+
+switch(hotbar_offset)
+{
+	case -95:
+		obj_ace.current_card_selected = obj_ace.card_number_one;
+	break;
+	
+	case -47.5:
+		obj_ace.current_card_selected = obj_ace.card_number_two;
+	break;
+	
+	case 0:
+		obj_ace.current_card_selected = obj_ace.card_number_three;
+	break;
+	
+	case 47.5:
+		obj_ace.current_card_selected = obj_ace.card_number_four;
+	break;
+	
+	case 95:
+		obj_ace.current_card_selected = obj_ace.card_number_five;
+	break;
+}

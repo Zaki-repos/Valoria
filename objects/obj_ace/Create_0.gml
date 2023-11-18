@@ -36,3 +36,4 @@ card_number_three = pointer_null;
 card_number_four = pointer_null;
 card_number_five = pointer_null;
 
+current_card_selected = pointer_null;

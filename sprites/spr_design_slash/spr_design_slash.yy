@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 4,
   "parent": {
-    "name": "active cards",
-    "path": "folders/Sprites/Items/active cards.yy",
+    "name": "slash",
+    "path": "folders/Sprites/Items/active cards/slash.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
