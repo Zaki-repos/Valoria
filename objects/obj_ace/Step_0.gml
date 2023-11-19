@@ -126,3 +126,8 @@ else
 {
 	sprite_index = spr_Ace_Animation;
 }
+
+if (health <= 0)
+{
+	health = 0;
+}

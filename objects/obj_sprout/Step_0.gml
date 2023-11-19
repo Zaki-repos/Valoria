@@ -1,5 +1,5 @@
 //max travel distance
-x = clamp (x , cam_x + sprite_width/2, cam_x + cam_w -sprite_width/2); 
+x = clamp (x , cam_x + sprite_width, cam_x + cam_w - sprite_width); 
 
 //determine anim speed
 if (speed == 1)
@@ -29,11 +29,12 @@ else if (hspeed < 0)
 //roaming range
 if (!is_alerted)
 {
+	
 	//sets timer for roaming intervals
 	if (roamTimer <= 0)
 	{
 		roamTimer = roamHoldTimer; 
-		randx = irandom_range(spawn_pos-400, spawn_pos+400); //chooses pos to go to
+		randx = irandom_range(cam_x + sprite_width,  cam_x + cam_w - sprite_width); //chooses pos to go to
 	}
 	
 	//moves enemy to pos
@@ -67,14 +68,17 @@ else
 		is_alerted = false;
 		sprout_movement_speed = 1;
 		randx = x;
+		roamTimer = 0;
 	}
 }
 
+distanceFromAceDebug = distance_to_object(obj_ace);
 
 if (is_attacking)
 {
+	
 	speed = 0;
-	image_speed = 1;
+	image_speed = 2;
 	sprite_index = spr_spout_attack;
 }
 else

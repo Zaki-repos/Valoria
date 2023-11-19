@@ -1,8 +1,8 @@
 if (is_attacking)
 {
 	speed = 0;
+	image_speed = 2;
 	sprite_index = spr_spout_attack;
-	image_speed = 1;
 	image_xscale = direction_facing;
 }
 else
@@ -12,5 +12,13 @@ else
 
 if (!place_meeting(x, y, obj_ace))
 {
-	is_attacking = false;
+	if (image_index >= image_number-1 || image_index == 0)
+	{
+		is_attacking = false;
+	}
+}
+
+if ( (image_index < 1 && !can_deal_dmg) )
+{
+	can_deal_dmg = true;
 }
