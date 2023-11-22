@@ -33,11 +33,11 @@ if (has_gravity == 1)
 }
 
 //movement input and avoid obj
-move_and_collide(_xinput * global.x_moveSpeed, _yinput * global.y_moveSpeed, obj_road);
+move_and_collide(_xinput * global.x_moveSpeed, _yinput * global.y_moveSpeed, obj_grass_floor);
 
 
 //ground check
-if (place_meeting(x, y+1, obj_road))
+if (place_meeting(x, y+1, obj_grass_floor))
 {
 	can_jump = 1;	//jump check is true
 	has_gravity = 0; //gravity is off when on ground
@@ -124,7 +124,7 @@ else if (_xinput > 0)
 }
 else
 {
-	sprite_index = spr_Ace_Animation;
+	sprite_index = spr_Ace;
 }
 
 if (health <= 0)
