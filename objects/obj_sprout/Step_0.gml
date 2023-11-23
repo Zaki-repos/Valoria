@@ -85,3 +85,9 @@ else
 {
 	sprite_index = spr_sprout;
 }
+
+
+if (sprout_health <= 0)
+{
+	alarm[0] = 1;
+}

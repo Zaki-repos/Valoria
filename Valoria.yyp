@@ -56,7 +56,7 @@
     "IDEVersion": "2023.6.0.92",
   },
   "resources": [
-    {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"rm_room_spawn","path":"rooms/rm_room_spawn/rm_room_spawn.yy",},},
     {"id":{"name":"spr_road","path":"sprites/spr_road/spr_road.yy",},},
     {"id":{"name":"spr_sprout","path":"sprites/spr_sprout/spr_sprout.yy",},},
     {"id":{"name":"obj_slash","path":"objects/obj_slash/obj_slash.yy",},},
@@ -85,10 +85,8 @@
     {"id":{"name":"spr_card_holder","path":"sprites/spr_card_holder/spr_card_holder.yy",},},
     {"id":{"name":"bg_far","path":"sprites/bg_far/bg_far.yy",},},
     {"id":{"name":"obj_grass","path":"objects/obj_grass/obj_grass.yy",},},
-    {"id":{"name":"obj_ground","path":"objects/obj_ground/obj_ground.yy",},},
     {"id":{"name":"spr_Ace","path":"sprites/spr_Ace/spr_Ace.yy",},},
     {"id":{"name":"obj_rock","path":"objects/obj_rock/obj_rock.yy",},},
-    {"id":{"name":"spr_ground","path":"sprites/spr_ground/spr_ground.yy",},},
     {"id":{"name":"spr_rock","path":"sprites/spr_rock/spr_rock.yy",},},
     {"id":{"name":"spr_design_slash","path":"sprites/spr_design_slash/spr_design_slash.yy",},},
     {"id":{"name":"spr_play_button","path":"sprites/spr_play_button/spr_play_button.yy",},},
@@ -107,9 +105,9 @@
     {"id":{"name":"obj_ace","path":"objects/obj_ace/obj_ace.yy",},},
   ],
   "RoomOrderNodes": [
+    {"roomId":{"name":"rm_room_spawn","path":"rooms/rm_room_spawn/rm_room_spawn.yy",},},
     {"roomId":{"name":"rm_room_type0","path":"rooms/rm_room_type0/rm_room_type0.yy",},},
     {"roomId":{"name":"rm_MainMenu","path":"rooms/rm_MainMenu/rm_MainMenu.yy",},},
-    {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
   ],
   "TextureGroups": [
     {"resourceType":"GMTextureGroup","resourceVersion":"1.3","name":"Default","autocrop":true,"border":2,"compressFormat":"bz2","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"targets":-1,},

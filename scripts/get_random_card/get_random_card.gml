@@ -49,10 +49,10 @@ global.passiveCards =
 
 global.num_passive_cards = array_length(global.passiveCards);
 
-//legend [cardtype, card descr, imageIndex, cooldown]
+//legend [cardtype, card descr, imageIndex, function, cooldown]
 global.activeCards = 
 [
-	[items.Slash, "You received Slash", 1, 1]
+	[items.Slash, "You received Slash", 1, slash, 1]
 ]
 	
 global.num_active_cards = array_length(global.activeCards);
@@ -308,4 +308,29 @@ function decMovement()
 }
 
 function slash()
-{}
+{
+	var ace_x = obj_ace.x;
+	var ace_y = obj_ace.y;
+	
+	if ( point_distance(ace_x, ace_y, mouse_x, mouse_y) > 500 )
+	{
+		var angle = arctan((mouse_y-ace_y)/(mouse_x-ace_x));
+		var attack_x = 500*(cos(angle));
+		var attack_y = 500*(sin(angle));
+	
+		if(mouse_x-ace_x > 0)
+		{
+			instance_create_layer(attack_x+ace_x, attack_y+ace_y, "ItemLayer", obj_slash);
+		}
+		else
+		{
+			instance_create_layer((attack_x*-1)+ace_x, (attack_y*-1)+ace_y, "ItemLayer", obj_slash);
+		}
+
+	}
+	else
+	{
+		var angle = arctan((mouse_y-ace_y)/(mouse_x-ace_x));
+		instance_create_layer(mouse_x, mouse_y, "ItemLayer", obj_slash);
+	}
+}

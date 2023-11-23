@@ -12,9 +12,10 @@ draw_text(1050, 10, "X: " + string(obj_ace.x) + " Y: " + string(obj_ace.y) + "\n
 			"Def Mult: " + string(global.defenseMultiplier) + "\n" +
 			"Cooldown Red: " + string(global.cooldownReduction) + "\n" +
 			"Num P-Cards: " + string(obj_ace.numPassiveCards) + "\n" +
-			"Num A-Cards: " + string(obj_ace.numActiveCards) + "\n"
+			"Num A-Cards: " + string(obj_ace.numActiveCards) + "\n" +
+			"mouse-x: " + string(mouse_x) + " mouse-y: " + string(mouse_y)
 			);
-			
+	/*		
 draw_text(750 , 10, "X: " + string(obj_sprout.x) + " Y :" + string(obj_sprout.y) + "\n" + 
 					"spawnpos: " + string(obj_sprout.spawn_pos) + "\n" +
 					"is alerted: " + string(obj_sprout.is_alerted) + "\n" +
@@ -24,4 +25,4 @@ draw_text(750 , 10, "X: " + string(obj_sprout.x) + " Y :" + string(obj_sprout.y)
 					"distance form ace: " + string(obj_sprout.distanceFromAceDebug) + "\n" +
 					"can dmg: " + string(obj_sprout.can_deal_dmg) + "\n" +
 					"ii: " + string(obj_sprout.image_index) + " in: " + string(obj_sprout.image_number)
-					);
+					);*/

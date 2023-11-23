@@ -24,7 +24,7 @@
   "physicsShapePoints": [],
   "physicsStartAwake": true,
   "properties": [],
-  "solid": false,
+  "solid": true,
   "spriteId": {
     "name": "spr_grass_floor",
     "path": "sprites/spr_grass_floor/spr_grass_floor.yy",

@@ -9,6 +9,7 @@
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":{"name":"obj_passive_card","path":"objects/obj_passive_card/obj_passive_card.yy",},"eventNum":0,"eventType":4,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":32,"eventType":9,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":2,"eventType":3,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":53,"eventType":6,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
@@ -38,8 +39,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_Ace_Animation",
-    "path": "sprites/spr_Ace_Animation/spr_Ace_Animation.yy",
+    "name": "spr_Ace",
+    "path": "sprites/spr_Ace/spr_Ace.yy",
   },
   "spriteMaskId": null,
   "visible": true,

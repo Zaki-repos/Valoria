@@ -33,8 +33,7 @@ if (has_gravity == 1)
 }
 
 //movement input and avoid obj
-move_and_collide(_xinput * global.x_moveSpeed, _yinput * global.y_moveSpeed, obj_grass_floor);
-
+move_and_collide(_xinput * global.x_moveSpeed, _yinput * global.y_moveSpeed, obj_road);
 
 //ground check
 if (place_meeting(x, y+1, obj_grass_floor))
