@@ -52,6 +52,7 @@
     {"name":"spr_greenbar","order":3,"path":"sprites/spr_greenbar/spr_greenbar.yy",},
     {"name":"obj_passive_card_hidden","order":4,"path":"objects/obj_passive_card_hidden/obj_passive_card_hidden.yy",},
     {"name":"obj_grass_floor","order":5,"path":"objects/obj_grass_floor/obj_grass_floor.yy",},
+    {"name":"spr_slash","order":2,"path":"sprites/spr_slash/spr_slash.yy",},
     {"name":"spr_grass_02","order":2,"path":"sprites/spr_grass_02/spr_grass_02.yy",},
     {"name":"spr_slash_animation","order":1,"path":"sprites/spr_slash_animation/spr_slash_animation.yy",},
     {"name":"spr_loading_screen","order":1,"path":"sprites/spr_loading_screen/spr_loading_screen.yy",},

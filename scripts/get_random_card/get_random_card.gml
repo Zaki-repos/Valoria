@@ -25,13 +25,14 @@ enum items
 global.cardDesign = 
 [
 	spr_card, // the card design from the rear (hidden card) - 0
-	spr_design_slash,//active card - slash - 1
+	spr_design_slash,//icon - slash - 1
 	spr_attack, //passive card - attack ups/downs - 2
 	spr_defense, //passive card - defense ups/downs - 3
 	spr_cooldown, //passive card - cooldown ups/downs - 4
 	spr_health, //passive card - health ups/downs - 5
 	spr_maxHealth, //passive card - maxHealth ups/downs - 6
-	spr_movement //passive card - movement ups/downs - 7
+	spr_movement, //passive card - movement ups/downs - 7
+	spr_slash //active card - slash - 8
 ]
 
 //legend [cardtype, card descr, imageIndex, cardDesign]
@@ -55,10 +56,10 @@ global.passiveCards =
 
 global.num_passive_cards = array_length(global.passiveCards);
 
-//legend [cardtype, card descr, imageIndex, function, cooldown]
+//legend [cardtype, card descr, imageIndex, cardIndex, function, cooldown]
 global.activeCards = 
 [
-	[items.Slash, "You received Slash", 1, slash, 1]
+	[items.Slash, "You received Slash", 1, 8, slash, 1]
 ]
 	
 global.num_active_cards = array_length(global.activeCards);
@@ -118,15 +119,15 @@ function incDefense()
 	var rarityChance = irandom_range(1, 100);
 	if (rarityChance > 90) // + 15%
 	{
-		global.defenseMultiplier += global.defenseMultiplier * 0.15;
+		global.defenseMultiplier -= global.defenseMultiplier * 0.15;
 	}
 	else if (rarityChance > 70) // + 10%
 	{
-		global.defenseMultiplier += global.defenseMultiplier * 0.10;
+		global.defenseMultiplier -= global.defenseMultiplier * 0.10;
 	}
 	else // +5%
 	{
-		global.defenseMultiplier += global.defenseMultiplier * 0.05;
+		global.defenseMultiplier -= global.defenseMultiplier * 0.05;
 	}
 }
 
@@ -135,15 +136,15 @@ function decDefense()
 	var rarityChance = irandom_range(1, 100);
 	if (rarityChance > 90) // - 15%
 	{
-		global.defenseMultiplier -= global.defenseMultiplier * 0.15;
+		global.defenseMultiplier += global.defenseMultiplier * 0.15;
 	}
 	else if (rarityChance > 70) // - 10%
 	{
-		global.defenseMultiplier -= global.defenseMultiplier * 0.10;
+		global.defenseMultiplier += global.defenseMultiplier * 0.10;
 	}
 	else // -5%
 	{
-		global.defenseMultiplier -= global.defenseMultiplier * 0.05;
+		global.defenseMultiplier += global.defenseMultiplier * 0.05;
 	}
 }
 
@@ -152,15 +153,15 @@ function impCooldown() //cooldownReduction
 	var rarityChance = irandom_range(1, 100);
 	if (rarityChance > 90) // + 15%
 	{
-		global.cooldownReduction += global.cooldownReduction * 0.15;
+		global.cooldownReduction -= global.cooldownReduction * 0.15;
 	}
 	else if (rarityChance > 70) // + 10%
 	{
-		global.cooldownReduction += global.cooldownReduction * 0.10;
+		global.cooldownReduction -= global.cooldownReduction * 0.10;
 	}
 	else // +5%
 	{
-		global.cooldownReduction += global.cooldownReduction * 0.05;
+		global.cooldownReduction -= global.cooldownReduction * 0.05;
 	}
 }
 
@@ -169,15 +170,15 @@ function worseCooldown()
 	var rarityChance = irandom_range(1, 100);
 	if (rarityChance > 90) // - 15%
 	{
-		global.cooldownReduction -= global.cooldownReduction * 0.15;
+		global.cooldownReduction += global.cooldownReduction * 0.15;
 	}
 	else if (rarityChance > 70) // - 10%
 	{
-		global.cooldownReduction -= global.cooldownReduction * 0.10;
+		global.cooldownReduction += global.cooldownReduction * 0.10;
 	}
 	else // -5%
 	{
-		global.cooldownReduction -= global.cooldownReduction * 0.05;
+		global.cooldownReduction += global.cooldownReduction * 0.05;
 	}
 }
 function incHealth() 

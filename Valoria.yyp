@@ -76,6 +76,7 @@
     {"id":{"name":"LombardicFont","path":"fonts/LombardicFont/LombardicFont.yy",},},
     {"id":{"name":"obj_passive_card_hidden","path":"objects/obj_passive_card_hidden/obj_passive_card_hidden.yy",},},
     {"id":{"name":"obj_grass_floor","path":"objects/obj_grass_floor/obj_grass_floor.yy",},},
+    {"id":{"name":"spr_slash","path":"sprites/spr_slash/spr_slash.yy",},},
     {"id":{"name":"spr_grass_02","path":"sprites/spr_grass_02/spr_grass_02.yy",},},
     {"id":{"name":"spr_slash_animation","path":"sprites/spr_slash_animation/spr_slash_animation.yy",},},
     {"id":{"name":"spr_loading_screen","path":"sprites/spr_loading_screen/spr_loading_screen.yy",},},
