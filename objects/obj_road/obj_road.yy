@@ -9,7 +9,10 @@
     "name": "Level",
     "path": "folders/Objects/Level.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_parent_floor",
+    "path": "objects/obj_parent_floor/obj_parent_floor.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
@@ -25,10 +28,7 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": {
-    "name": "spr_road",
-    "path": "sprites/spr_road/spr_road.yy",
-  },
+  "spriteId": null,
   "spriteMaskId": null,
   "visible": true,
 }

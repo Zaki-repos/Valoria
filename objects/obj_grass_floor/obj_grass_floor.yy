@@ -9,7 +9,10 @@
     "name": "Level",
     "path": "folders/Objects/Level.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_parent_floor",
+    "path": "objects/obj_parent_floor/obj_parent_floor.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
@@ -24,7 +27,7 @@
   "physicsShapePoints": [],
   "physicsStartAwake": true,
   "properties": [],
-  "solid": true,
+  "solid": false,
   "spriteId": {
     "name": "spr_grass_floor",
     "path": "sprites/spr_grass_floor/spr_grass_floor.yy",

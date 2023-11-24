@@ -1,5 +1,5 @@
 //hides the card; moves off screen; adds to num passive cards
-visible = false
+visible = false;
 x = -10;
 y = -10;
 obj_ace.numPassiveCards += 1;
@@ -12,39 +12,40 @@ hud_pop_up.pop_up = pop_up;
 switch(cardType)
 {
 	case cards.AttackUp:
-		incAttack();
+	incAttack();
 	break;
 	case cards.AttackDown:
-		decAttack();
+	decAttack();
 	break;
 	case cards.DefenseUp:
-		incDefense();
+	incDefense();
 	break;
-		case cards.DefenseDown:
-		decDefense();
+	case cards.DefenseDown:
+	decDefense();
 	break;
 	case cards.CooldownUp:
-		impCooldown();
+	impCooldown();
 	break;
 	case cards.CooldownDown:
-		worseCooldown();
+	worseCooldown();
 	break;
-		case cards.HealthUp:
-		incHealth();
+	case cards.HealthUp:
+	incHealth();
 	break;
 	case cards.HealthDown:
-		decHealth();
+	decHealth();
 	break;
 	case cards.MaxHealthUp:
-		incMaxHealth();
+	incMaxHealth();
 	break;
-		case cards.MaxHealthDown:
-		decMaxHealth();
+	case cards.MaxHealthDown:
+	decMaxHealth();
 	break;
 	case cards.MovementUp:
-		incMovement();
+	incMovement();
 	break;
 	case cards.MovementDown:
-		decMovement();
+	decMovement();
 	break;
 }
+

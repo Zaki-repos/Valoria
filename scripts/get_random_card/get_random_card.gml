@@ -24,27 +24,33 @@ enum items
 
 global.cardDesign = 
 [
-	spr_card, // the card design from the rear (hidden card)
-	spr_design_slash//active card - slash
+	spr_card, // the card design from the rear (hidden card) - 0
+	spr_design_slash,//active card - slash - 1
+	spr_attack, //passive card - attack ups/downs - 2
+	spr_defense, //passive card - defense ups/downs - 3
+	spr_cooldown, //passive card - cooldown ups/downs - 4
+	spr_health, //passive card - health ups/downs - 5
+	spr_maxHealth, //passive card - maxHealth ups/downs - 6
+	spr_movement //passive card - movement ups/downs - 7
 ]
 
-//legend [cardtype, card descr, imageIndex]
+//legend [cardtype, card descr, imageIndex, cardDesign]
 global.passiveCards = 
 [
 	//attack cards
 		
-	[cards.AttackUp, "Attacking Increased", 0],
-	[cards.AttackDown, "Attacking Decreased", 0],
-	[cards.DefenseUp, "Defense Increased", 0],
-	[cards.DefenseDown, "Defense Decreased", 0],
-	[cards.CooldownUp, "Cooldown Improved", 0],
-	[cards.CooldownDown, "Cooldown Worsened", 0],
-	[cards.HealthUp, "Health Up", 0],
-	[cards.HealthDown, "Health Down", 0],
-	[cards.MaxHealthUp, "Max Health Increased", 0],
-	[cards.MaxHealthDown, "Max Health Decreased", 0],
-	[cards.MovementUp, "Movement Increased", 0],
-	[cards.MovementDown, "Movement Decreased", 0]
+	[cards.AttackUp, "Attacking Increased", 2],
+	[cards.AttackDown, "Attacking Decreased", 2],
+	[cards.DefenseUp, "Defense Increased", 3],
+	[cards.DefenseDown, "Defense Decreased", 3],
+	[cards.CooldownUp, "Cooldown Improved", 4],
+	[cards.CooldownDown, "Cooldown Worsened", 4],
+	[cards.HealthUp, "Health Up", 5],
+	[cards.HealthDown, "Health Down", 5],
+	[cards.MaxHealthUp, "Max Health Increased", 6],
+	[cards.MaxHealthDown, "Max Health Decreased", 6],
+	[cards.MovementUp, "Movement Increased", 7],
+	[cards.MovementDown, "Movement Decreased", 7]
 ]
 
 global.num_passive_cards = array_length(global.passiveCards);

@@ -1,0 +1,1 @@
+curr_sprite = 0;

@@ -16,3 +16,4 @@ if (numActiveCards < 5)
 		event_user(0);
 	}
 }
+

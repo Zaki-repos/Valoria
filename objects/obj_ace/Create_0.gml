@@ -1,29 +1,33 @@
 //player stats
 global.maxHealth = 100;
 health = 100; //base health
-global.x_moveSpeed = 4; //movement X speed
-global.y_moveSpeed = 3; //movement Y speed
+global.x_moveSpeed = 8; //movement X speed
+global.y_moveSpeed = 2; //movement Y speed
 global.attackMultiplier = 1; //any attack is multiplied by this value
 global.defenseMultiplier = 1; //any incoming damage is multiplied this value
 global.cooldownReduction = 1; //should be above zero, changes cooldown speed
 
+
+_xinput = 0;
+_yinput = 0;
+
+//variable checks *temp*
 canMoveLeft = true;
 canMoveRight = true;
-canCrouch = false;
-
 
 //jump vars
-jumpSpeed = 8;
+jumpSpeed = 7;
 jumpHoldFrames = 15;
 jumpTimer = 0;
 
 //jump check
-can_jump = 0; // determines jump
+can_jump = true; // determines jump
 jump = 0; //jump input (changes when key pressed)
 
-//player grav
-has_gravity = 1;
-player_gravity = 4.5;
+on_ground = false;
+in_air = false;
+is_falling = false;
+is_jumping = false;
 
 numPassiveCards = 0;
 numActiveCards = 0;
