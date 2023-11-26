@@ -2,9 +2,9 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "spr_rock_1",
-  "bbox_bottom": 95,
+  "bbox_bottom": 62,
   "bbox_left": 0,
-  "bbox_right": 97,
+  "bbox_right": 63,
   "bbox_top": 0,
   "bboxMode": 0,
   "collisionKind": 1,
@@ -13,14 +13,14 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1b58835b-d54c-4195-ba85-eb62b2b28ec3",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"871905ab-c096-4bfe-9a7b-bff27ea9ac17",},
   ],
   "gridX": 0,
   "gridY": 0,
-  "height": 96,
+  "height": 63,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"754f4528-f932-4419-9e9a-1783a3417568","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"2aae9006-d55e-4947-9039-da01e94f49a7","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 9,
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"1b58835b-d54c-4195-ba85-eb62b2b28ec3","path":"sprites/spr_rock_1/spr_rock_1.yy",},},},"Disabled":false,"id":"a6dc6273-c299-4904-bbe7-d8adc66ddcbc","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"871905ab-c096-4bfe-9a7b-bff27ea9ac17","path":"sprites/spr_rock_1/spr_rock_1.yy",},},},"Disabled":false,"id":"4907c348-119a-41c5-9e1d-b13a19b2da85","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
@@ -70,5 +70,5 @@
   },
   "type": 0,
   "VTile": false,
-  "width": 98,
+  "width": 64,
 }

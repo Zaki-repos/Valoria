@@ -13,3 +13,6 @@ cardAction = card_properties[4];
 cooldown = 0 // card_properties[5] * 60 * global.cooldownReduction;
 
 
+curveAsset = CardAnim;
+curvePos = 0;
+curveSpeed = 0.02;

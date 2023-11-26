@@ -66,7 +66,7 @@ if (!is_alerted)
 	}
 	
 	//if player within distance, begin attacking
-	if (distance_to_object(obj_ace) <= 150)
+	if (distance_to_object(obj_ace) <= tracking_range)
 	{
 		is_alerted = true;
 		sprout_movement_speed = 2;
@@ -78,7 +78,7 @@ else
 	speed = sprout_movement_speed; //sets the speed
 	
 	//if player leaves enemy sight, enemy loses interest
-	if (distance_to_object(obj_ace) > 150)
+	if (distance_to_object(obj_ace) > tracking_range)
 	{
 		is_alerted = false;
 		sprout_movement_speed = 1;

@@ -14,6 +14,7 @@ is_alerted = false;
 is_tucking = false;
 is_rolling = false;
 is_attacking = false;
+is_idle = true;
 
 direction_facing = 0;
 can_deal_dmg = true;
@@ -23,6 +24,8 @@ roamHoldTimer = 300;
 
 attack_roll_count = 0;
 attack_roll_num = 10;
+
+tracking_range = 300;
 
 randx = 0;
 randy = 0;

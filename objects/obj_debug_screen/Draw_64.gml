@@ -17,7 +17,8 @@ draw_text(1050, 10, "X: " + string(obj_ace.x) + " Y: " + string(obj_ace.y) + "\n
 			"Num A-Cards: " + string(obj_ace.numActiveCards) + "\n" +
 			"sprite: " + string(curr_sprite) + "\n" +
 			"mouse-x: " + string(mouse_x) + " mouse-y: " + string(mouse_y) + "\n" +
-			"ic: " + string(obj_ace.is_climbing)
+			"ic: " + string(obj_ace.is_climbing) + "\n" +
+			"pers: " + string(room_persistent)
 			);
 			//draw_rectangle(obj_ace.bbox_left,obj_ace.bbox_top,obj_ace.bbox_right,obj_ace.bbox_bottom,false);
 			

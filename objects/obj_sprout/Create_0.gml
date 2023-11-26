@@ -14,6 +14,8 @@ is_attacking = false;
 direction_facing = 0;
 can_deal_dmg = true;
 
+tracking_range = 150;
+
 roamTimer = 0;
 roamHoldTimer = 300;
 
