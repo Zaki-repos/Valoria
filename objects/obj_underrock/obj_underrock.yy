@@ -6,8 +6,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Level",
-    "path": "folders/Objects/Level.yy",
+    "name": "Flooring",
+    "path": "folders/Objects/Level/Flooring.yy",
   },
   "parentObjectId": null,
   "persistent": false,

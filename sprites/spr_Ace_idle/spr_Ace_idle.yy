@@ -4,7 +4,7 @@
   "name": "spr_Ace_idle",
   "bbox_bottom": 210,
   "bbox_left": 48,
-  "bbox_right": 108,
+  "bbox_right": 110,
   "bbox_top": 1,
   "bboxMode": 2,
   "collisionKind": 1,

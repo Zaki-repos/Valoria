@@ -1,6 +1,20 @@
 //max travel distance
 x = clamp (x , cam_x + sprite_width, cam_x + cam_w - sprite_width); 
 
+//detects collision with floor
+if ( place_meeting(x, y+2, obj_parent_floor) )
+{
+	_y_velocity = 0; //sets y input to 0
+	on_ground = true; //bool checks
+}
+else if (_y_velocity < 10) //determines gravity
+{
+	on_ground = false; //bool check
+	_y_velocity += 1; //applies grav
+}
+
+y = y + _y_velocity;
+
 //determine anim speed
 if (speed == 1)
 {
@@ -25,6 +39,7 @@ else if (hspeed < 0)
 	image_xscale = 1;
 	direction_facing = 1;
 }
+
 
 //roaming range
 if (!is_alerted)
@@ -86,8 +101,7 @@ else
 	sprite_index = spr_sprout;
 }
 
-
-if (sprout_health <= 0)
+if (enemy_health <= 0)
 {
 	alarm[0] = 1;
 }

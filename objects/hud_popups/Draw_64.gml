@@ -4,6 +4,7 @@ draw_set_font(LombardicFont);
 //animates the description to rise
 if (displayTimer > 0)
 {
+	draw_set_color(c_black);
 	draw_set_valign(fa_middle);
 	draw_set_halign(fa_center);
 	draw_set_alpha(opacity_value);
@@ -16,4 +17,5 @@ if (displayTimer > 0)
 	draw_set_valign(0)
 	draw_set_halign(0)
 }
+draw_set_color(-1);
 draw_set_font(-1);

@@ -17,6 +17,7 @@ canMoveRight = true;
 
 //jump vars
 jumpSpeed = 7;
+climbSpeed = 3;
 jumpHoldFrames = 15;
 jumpTimer = 0;
 
@@ -28,6 +29,7 @@ on_ground = false;
 in_air = false;
 is_falling = false;
 is_jumping = false;
+is_climbing = false;
 
 numPassiveCards = 0;
 numActiveCards = 0;
@@ -41,3 +43,10 @@ card_number_four = pointer_null;
 card_number_five = pointer_null;
 
 current_card_selected = pointer_null;
+
+instance_create_layer(0, 0, "HUD", obj_HUD_controller);
+instance_create_layer(0, 0, "HUD", obj_hud_extra);
+instance_create_layer(0, 0, "HUD", obj_debug_screen);
+
+next_room_x = 0;
+next_room_y = 0;

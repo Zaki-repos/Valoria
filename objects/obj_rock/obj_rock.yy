@@ -6,8 +6,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Level",
-    "path": "folders/Objects/Level.yy",
+    "name": "Rocks",
+    "path": "folders/Objects/Level/Rocks.yy",
   },
   "parentObjectId": null,
   "persistent": false,
@@ -26,8 +26,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_rock",
-    "path": "sprites/spr_rock/spr_rock.yy",
+    "name": "spr_rock_0",
+    "path": "sprites/spr_rock_0/spr_rock_0.yy",
   },
   "spriteMaskId": null,
   "visible": true,

@@ -2,6 +2,7 @@
 rightKey = keyboard_check(ord("D"));
 leftKey = keyboard_check(ord("A"));
 jump = keyboard_check(ord("W"));//the jump input is captured
+down = keyboard_check(ord("S")); //the down input is captured
 
 
 //calculates directional input in the x axis
@@ -28,15 +29,42 @@ if ( place_meeting(x, y+2, obj_parent_floor) )
 		is_jumping = false;
 	}
 }
-else if (_yinput < 10) //determines gravity
+else if (_yinput < 10 && !is_climbing) //determines gravity
 {
 	on_ground = false; //bool check
 	
 	_yinput += 1; //applies grav
 }
 
+
+if (is_climbing)
+{
+	is_jumping = false;
+	is_falling = false;
+	on_ground = false;
+	
+	sprite_index = spr_Ace_climb;
+
+	
+	if (jump)
+	{
+		_yinput = -climbSpeed * global.y_moveSpeed;
+		image_speed = 1 * global.y_moveSpeed/2;
+	}
+	else if (down)
+	{
+		_yinput = climbSpeed * global.y_moveSpeed;
+		image_speed = 1 * global.y_moveSpeed/2;
+	}
+	else
+	{
+		_yinput = 0;
+		image_speed = 0;
+	}
+}
+
 //bool check
-if (_yinput >= 0)
+if (_yinput > 0)
 {
 	is_falling = true;
 }
@@ -48,6 +76,12 @@ else
 //performs movement and collision
 move_and_collide(_xinput * global.x_moveSpeed, _yinput, obj_parent_floor);
 
+
+if (is_climbing)
+{
+	is_climbing = false;
+}
+
 //picks up passive card
 if (distance_to_object(obj_passive_card) < 2) 
 {
@@ -56,6 +90,7 @@ if (distance_to_object(obj_passive_card) < 2)
 		event_user(0);
 	}
 }
+
 
 //determines direction scale
 if (_xinput < 0)
@@ -71,7 +106,7 @@ else if (_xinput > 0)
 if (_xinput != 0)
 {
 	sprite_index = spr_ace_walking //Loads walking
-	image_speed = 1 * global.x_moveSpeed/2; //at speed
+	image_speed = 1 * global.x_moveSpeed/4; //at speed
 }
 else if (on_ground)
 {

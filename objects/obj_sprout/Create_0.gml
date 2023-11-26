@@ -1,18 +1,18 @@
 //stop animation (temporary)
 image_speed = 1;
 
+//gravity
+_y_velocity = 0;
+on_ground = false;
 
 //default sprout vars
-sprout_health = 20;
-sprout_dmg = 2;
+enemy_health = 20;
 sprout_movement_speed = 1;
 
 is_alerted = false;
 is_attacking = false;
 direction_facing = 0;
 can_deal_dmg = true;
-spawn_pos = x;
-x_input = 0;
 
 roamTimer = 0;
 roamHoldTimer = 300;
