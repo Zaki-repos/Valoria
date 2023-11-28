@@ -1,7 +1,7 @@
 //hides the card; moves off screen; adds to num passive cards
 visible = false;
-x = -10;
-y = -10;
+x = -50;
+y = -50;
 obj_ace.numPassiveCards += 1;
 
 //creates a pop-up

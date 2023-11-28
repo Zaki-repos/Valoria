@@ -151,3 +151,9 @@ if (enemy_health <= 0)
 {
 	alarm[0] = 1;
 }
+
+if (enemy_health < last_frame_health)
+{
+	show_red_overlay = true;
+	last_frame_health = enemy_health;
+}

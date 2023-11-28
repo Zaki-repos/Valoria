@@ -126,6 +126,27 @@ if (is_jumping)
 	}
 }
 
+if (health < global.last_health_frame)
+{
+	iframe = true;
+	global.invulnerable = true;
+	global.last_health_frame = health;
+	show_red_overlay = true;
+	alarm[1] = 1;
+	alarm[3] = 15;
+	alarm[0] = 30;
+}
+/*
+if (global.invulnerable)
+{
+	if (iframe) 
+	{
+		alarm[1] = 0;
+	}
+}*/
+
+image_alpha = player_opacity
+
 //prevents underhealth
 if (health <= 0)
 {

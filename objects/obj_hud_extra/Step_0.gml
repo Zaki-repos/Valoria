@@ -7,5 +7,18 @@ if (card != pointer_null)
 	{
 		show_slash_range = true;
 	}
+	else
+	{
+		show_slash_range = false;
+	}
+	
+	if (card.cardType == items.Bomb)
+	{
+		show_bomb_range = true;
+	}
+	else
+	{
+		show_bomb_range = false;
+	}
 
 }

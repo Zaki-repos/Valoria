@@ -5,8 +5,13 @@ global.x_moveSpeed = 8; //movement X speed
 global.y_moveSpeed = 2; //movement Y speed
 global.attackMultiplier = 1; //any attack is multiplied by this value
 global.defenseMultiplier = 1; //any incoming damage is multiplied this value
-global.cooldownReduction = 1; //should be above zero, changes cooldown speed
+global.cooldownReduction = 1; //should be above zero, changes cooldown 
+global.last_health_frame = health;
+global.invulnerable = false;
 
+show_red_overlay = false;
+player_opacity = 1;
+iframe = true;
 
 _xinput = 0;
 _yinput = 0;

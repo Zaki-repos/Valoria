@@ -18,7 +18,9 @@ draw_text(1050, 10, "X: " + string(obj_ace.x) + " Y: " + string(obj_ace.y) + "\n
 			"sprite: " + string(curr_sprite) + "\n" +
 			"mouse-x: " + string(mouse_x) + " mouse-y: " + string(mouse_y) + "\n" +
 			"ic: " + string(obj_ace.is_climbing) + "\n" +
-			"pers: " + string(room_persistent)
+			"pers: " + string(room_persistent) + "\n" +
+			"inv: " + string(global.invulnerable) + "\n"+
+			"pa: " + string (obj_ace.image_alpha)
 			);
 			//draw_rectangle(obj_ace.bbox_left,obj_ace.bbox_top,obj_ace.bbox_right,obj_ace.bbox_bottom,false);
 			

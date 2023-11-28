@@ -19,7 +19,8 @@ enum cards
 
 enum items
 {
-	Slash
+	Slash, 
+	Bomb
 }
 
 global.cardDesign = 
@@ -32,7 +33,9 @@ global.cardDesign =
 	spr_health, //passive card - health ups/downs - 5
 	spr_maxHealth, //passive card - maxHealth ups/downs - 6
 	spr_movement, //passive card - movement ups/downs - 7
-	spr_slash //active card - slash - 8
+	spr_slash, //active card - slash - 8
+	spr_bomb, //active card - bomb - 9
+	spr_design_bomb//icon - bomb - 10
 ]
 
 //legend [cardtype, card descr, imageIndex, cardDesign]
@@ -59,13 +62,24 @@ global.num_passive_cards = array_length(global.passiveCards);
 //legend [cardtype, card descr, imageIndex, cardIndex, function, cooldown]
 global.activeCards = 
 [
-	[items.Slash, "You received Slash", 1, 8, slash, 1]
+	[items.Slash, "You received Slash", 1, 8, slash, 1],
+	[items.Bomb, "You received Bomb", 10, 9, bomb, 4]
 ]
 	
 global.num_active_cards = array_length(global.activeCards);
 
 function getRandomCard()
 {	
+	var act_or_pass = irandom(2);
+	
+	if (act_or_pass == 1)
+	{
+		getRandomActiveCard();
+	}
+	else
+	{
+		getRandomPassiveCard();
+	}
 }
 
 function getRandomActiveCard()
@@ -339,5 +353,33 @@ function slash()
 	{
 		var angle = arctan((mouse_y-ace_y)/(mouse_x-ace_x));
 		instance_create_layer(mouse_x, mouse_y, "ItemLayer", obj_slash);
+	}
+}
+
+function bomb()
+{
+	var ace_x = obj_ace.x;
+	var ace_y = obj_ace.y;
+	
+	if ( point_distance(ace_x, ace_y, mouse_x, mouse_y) > 300 )
+	{
+		var angle = arctan((mouse_y-ace_y)/(mouse_x-ace_x));
+		var attack_x = 300*(cos(angle));
+		var attack_y = 300*(sin(angle));
+	
+		if(mouse_x-ace_x > 0)
+		{
+			instance_create_layer(attack_x+ace_x, attack_y+ace_y, "ItemLayer", obj_bomb);
+		}
+		else
+		{
+			instance_create_layer((attack_x*-1)+ace_x, (attack_y*-1)+ace_y, "ItemLayer", obj_bomb);
+		}
+
+	}
+	else
+	{
+		var angle = arctan((mouse_y-ace_y)/(mouse_x-ace_x));
+		instance_create_layer(mouse_x, mouse_y, "ItemLayer", obj_bomb);
 	}
 }

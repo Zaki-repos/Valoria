@@ -7,7 +7,10 @@ on_ground = false;
 
 //default sprout vars
 enemy_health = 20;
+last_frame_health = enemy_health;
 bee_movement_speed = 1;
+
+show_red_overlay = false;
 
 
 is_alerted = false;

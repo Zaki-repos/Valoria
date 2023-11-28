@@ -11,3 +11,7 @@ pop_up = card_properties[1];
 imageIndex = card_properties[2];
 
 sprite_index = global.cardDesign[imageIndex];
+
+curveAsset = CardAnim;
+curvePos = 0;
+curveSpeed = 0.02;
