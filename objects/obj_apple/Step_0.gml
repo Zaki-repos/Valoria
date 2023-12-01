@@ -77,6 +77,11 @@ else
 	direction = point_direction(x, y, obj_ace.x, y); //sets the direction to player
 	speed = apple_movement_speed; //sets the speed
 	
+	if (x+2 == obj_ace.x || x+1 == obj_ace.x || x == obj_ace.x || x-1 == obj_ace.x ||x-2 == obj_ace.x)
+	{
+		speed = 0;
+	}
+	
 	//if player leaves enemy sight, enemy loses interest
 	if (distance_to_object(obj_ace) > tracking_range)
 	{
@@ -94,7 +99,7 @@ if (is_attacking)
 	speed = 0;
 	image_speed = 2;
 	image_xscale = direction_facing;
-	//sprite_index = spr_spout_attack;
+	sprite_index = spr_apple_attack;
 }
 else
 {

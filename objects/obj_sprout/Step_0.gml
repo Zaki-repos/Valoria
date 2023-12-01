@@ -77,6 +77,11 @@ else
 	direction = point_direction(x, y, obj_ace.x, y); //sets the direction to player
 	speed = sprout_movement_speed; //sets the speed
 	
+	if (x+2 == obj_ace.x || x+1 == obj_ace.x || x == obj_ace.x || x-1 == obj_ace.x ||x-2 == obj_ace.x)
+	{
+		speed = 0;
+	}
+	
 	//if player leaves enemy sight, enemy loses interest
 	if (distance_to_object(obj_ace) > tracking_range)
 	{

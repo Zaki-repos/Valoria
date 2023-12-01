@@ -8,6 +8,7 @@ global.defenseMultiplier = 1; //any incoming damage is multiplied this value
 global.cooldownReduction = 1; //should be above zero, changes cooldown 
 global.last_health_frame = health;
 global.invulnerable = false;
+global.knockback = 0;
 
 show_red_overlay = false;
 player_opacity = 1;

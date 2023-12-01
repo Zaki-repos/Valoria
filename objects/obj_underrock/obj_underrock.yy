@@ -6,8 +6,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Flooring",
-    "path": "folders/Objects/Level/Flooring.yy",
+    "name": "Background",
+    "path": "folders/Objects/Level/Background.yy",
   },
   "parentObjectId": null,
   "persistent": false,

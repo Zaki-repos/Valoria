@@ -1,5 +1,6 @@
 if (is_room_clear)
 {
+	instance_destroy(obj_destructable_parent);
 	room_persistent = true;
 }
 else

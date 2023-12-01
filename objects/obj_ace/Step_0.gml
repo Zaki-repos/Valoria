@@ -73,6 +73,28 @@ else
 	is_falling = false;
 }
 
+//knockback
+if (global.knockback > 0)
+{
+	x += global.knockback;
+	global.knockback -= 0.2;
+	
+	if (global.knockback < 0)
+	{
+		global.knockback = 0;
+	}
+}
+else if (global.knockback < 0)
+{
+	x += global.knockback;
+	global.knockback += 0.2;
+	
+	if (global.knockback > 0)
+	{
+		global.knockback = 0;
+	}
+}
+
 //performs movement and collision
 move_and_collide(_xinput * global.x_moveSpeed, _yinput, obj_parent_floor);
 
@@ -136,14 +158,6 @@ if (health < global.last_health_frame)
 	alarm[3] = 15;
 	alarm[0] = 30;
 }
-/*
-if (global.invulnerable)
-{
-	if (iframe) 
-	{
-		alarm[1] = 0;
-	}
-}*/
 
 image_alpha = player_opacity
 

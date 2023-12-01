@@ -1,5 +1,5 @@
 
-if ( place_meeting(x, y, obj_parent_floor) )
+if ( place_meeting(x, y+3, obj_parent_floor) )
 {
-	y -= 1;
+	y -= 4;
 }

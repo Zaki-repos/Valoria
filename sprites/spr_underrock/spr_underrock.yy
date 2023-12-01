@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "Flooring",
-    "path": "folders/Sprites/Level Design/Flooring.yy",
+    "name": "Background",
+    "path": "folders/Sprites/Level Design/Background.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

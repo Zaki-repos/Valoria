@@ -63,22 +63,22 @@ global.num_passive_cards = array_length(global.passiveCards);
 global.activeCards = 
 [
 	[items.Slash, "You received Slash", 1, 8, slash, 1],
-	[items.Bomb, "You received Bomb", 10, 9, bomb, 4]
+	[items.Bomb, "You received Bomb", 10, 9, bomb, 2.5]
 ]
 	
 global.num_active_cards = array_length(global.activeCards);
 
-function getRandomCard()
+function spawnRandomCard()
 {	
-	var act_or_pass = irandom(2);
+	var act_or_pass = irandom(100);
 	
-	if (act_or_pass == 1)
+	if (act_or_pass > 95)
 	{
-		getRandomActiveCard();
+		instance_create_layer(self.x, self.y + 10, "ItemLayer", obj_active_card);
 	}
 	else
 	{
-		getRandomPassiveCard();
+		instance_create_layer(self.x, self.y, "ItemLayer", obj_passive_card);
 	}
 }
 
