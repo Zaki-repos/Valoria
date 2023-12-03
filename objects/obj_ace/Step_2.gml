@@ -7,7 +7,7 @@ if (health <= 0 && !global.game_over)
 	instance_create_layer(x, y+sprite_height/2, "EntityLayer", obj_ace_dead);
 	instance_destroy(obj_HUD_controller);
 	instance_destroy(obj_hud_extra);
-	instance_destroy(obj_debug_screen);
+	//instance_destroy(obj_debug_screen);
 	
 	visible = false;
 	x = -500;

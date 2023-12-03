@@ -57,7 +57,7 @@ current_card_selected = pointer_null;
 
 instance_create_layer(0, 0, "HUD", obj_HUD_controller);
 instance_create_layer(0, 0, "HUD", obj_hud_extra);
-instance_create_layer(0, 0, "HUD", obj_debug_screen);
+//instance_create_layer(0, 0, "HUD", obj_debug_screen);
 
 next_room_x = 0;
 next_room_y = 0;
