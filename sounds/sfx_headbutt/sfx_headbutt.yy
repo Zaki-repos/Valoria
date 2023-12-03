@@ -1,7 +1,7 @@
 {
   "resourceType": "GMSound",
   "resourceVersion": "1.0",
-  "name": "ms_level_one",
+  "name": "sfx_headbutt",
   "audioGroupId": {
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
@@ -10,14 +10,14 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 180.74121,
+  "duration": 0.417959,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "Enemies",
+    "path": "folders/Sounds/Enemies.yy",
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "ms_level_one.mp3",
+  "soundFile": "sfx_headbutt.mp3",
   "type": 0,
   "volume": 1.0,
 }

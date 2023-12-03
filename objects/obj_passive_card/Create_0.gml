@@ -2,6 +2,8 @@
 // You can write your code in this editor
 //enum, string, index, func
 
+collected = false;
+
 first_contact = true;
 
 card_properties = getRandomPassiveCard();

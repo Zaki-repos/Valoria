@@ -1,1 +1,1 @@
-other.enemy_health -= damage_per_frame * global.attackMultiplier;
+other.enemy_health -= damage_per_frame * global.attackMultiplier * 3;

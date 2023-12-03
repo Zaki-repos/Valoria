@@ -74,11 +74,11 @@ function spawnRandomCard()
 	
 	if (act_or_pass > 95)
 	{
-		instance_create_layer(self.x, self.y + 10, "ItemLayer", obj_active_card);
+		instance_create_layer(self.x, self.y - 30, "ItemLayer", obj_active_card);
 	}
 	else
 	{
-		instance_create_layer(self.x, self.y, "ItemLayer", obj_passive_card);
+		instance_create_layer(self.x, self.y - 30, "ItemLayer", obj_passive_card);
 	}
 }
 
@@ -200,15 +200,15 @@ function incHealth()
 	var rarityChance = irandom_range(1, 100);
 	if (rarityChance > 90) // + 15%
 	{
-		health += health * 0.15;
+		health += 20;
 	}
 	else if (rarityChance > 70) // + 10%
 	{
-		health += health * 0.10;
+		health += 15;
 	}
 	else // +5%
 	{
-		health += health * 0.05;
+		health += 10;
 	}
 	
 	//keeps health at integer
@@ -223,15 +223,15 @@ function decHealth()
 	var rarityChance = irandom_range(1, 100);
 	if (rarityChance > 90) // - 15%
 	{
-		health -= health * 0.15;
+		health -= health * 0.2;
 	}
 	else if (rarityChance > 70) // - 10%
 	{
-		health -= health * 0.10;
+		health -= health * 0.15;
 	}
 	else // -5%
 	{
-		health -= health * 0.05;
+		health -= health * 0.1;
 	}
 	
 	//keeps health under 1HP from rounding to death

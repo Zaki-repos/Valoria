@@ -96,7 +96,8 @@ else if (global.knockback < 0)
 }
 
 //performs movement and collision
-move_and_collide(_xinput * global.x_moveSpeed, _yinput, obj_parent_floor);
+if (can_move)
+	move_and_collide(_xinput * global.x_moveSpeed, _yinput, obj_parent_floor);
 
 
 if (is_climbing)
@@ -153,6 +154,10 @@ if (health < global.last_health_frame)
 	iframe = true;
 	global.invulnerable = true;
 	global.last_health_frame = health;
+	
+	if (!audio_is_playing(sfx_player_hurt))
+		audio_play_sound(sfx_player_hurt, 2, 0);
+		
 	show_red_overlay = true;
 	alarm[1] = 1;
 	alarm[3] = 15;

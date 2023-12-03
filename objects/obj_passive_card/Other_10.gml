@@ -4,6 +4,8 @@ x = -50;
 y = -50;
 obj_ace.numPassiveCards += 1;
 
+collected = true;
+
 //creates a pop-up
 var hud_pop_up = instance_create_layer(-50, -50, "HUD", hud_popups);
 hud_pop_up.pop_up = pop_up;

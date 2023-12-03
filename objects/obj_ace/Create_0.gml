@@ -9,11 +9,16 @@ global.cooldownReduction = 1; //should be above zero, changes cooldown
 global.last_health_frame = health;
 global.invulnerable = false;
 global.knockback = 0;
+global.game_over = false;
+
+audio_stop_all();
+audio_play_sound(ms_level, 1, 1);
 
 show_red_overlay = false;
 player_opacity = 1;
 iframe = true;
 
+can_move = true;
 _xinput = 0;
 _yinput = 0;
 

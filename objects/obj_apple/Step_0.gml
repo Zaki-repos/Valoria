@@ -66,7 +66,7 @@ if (!is_alerted)
 	}
 	
 	//if player within distance, begin attacking
-	if (distance_to_object(obj_ace) <= tracking_range)
+	if (collision_line(x-(sprite_width/2)-tracking_range, y, x+(sprite_width/2)+tracking_range, y, obj_ace, true, false) == obj_ace.id)
 	{
 		is_alerted = true;
 		apple_movement_speed = 2;
@@ -77,13 +77,8 @@ else
 	direction = point_direction(x, y, obj_ace.x, y); //sets the direction to player
 	speed = apple_movement_speed; //sets the speed
 	
-	if (x+2 == obj_ace.x || x+1 == obj_ace.x || x == obj_ace.x || x-1 == obj_ace.x ||x-2 == obj_ace.x)
-	{
-		speed = 0;
-	}
-	
 	//if player leaves enemy sight, enemy loses interest
-	if (distance_to_object(obj_ace) > tracking_range)
+	if (collision_line(x-(sprite_width/2)-tracking_range, y-(sprite_height/2), x+(sprite_width/2)+tracking_range, y+(sprite_height/2), obj_ace, true, false) == noone)
 	{
 		is_alerted = false;
 		apple_movement_speed = 1;

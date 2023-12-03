@@ -26,7 +26,7 @@
   "origin": 0,
   "parent": {
     "name": "Background Sprites",
-    "path": "folders/Sprites/Background Sprites.yy",
+    "path": "folders/Sprites/Screens/Background Sprites.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

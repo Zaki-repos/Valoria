@@ -28,7 +28,7 @@ roamHoldTimer = 300;
 attack_roll_count = 0;
 attack_roll_num = 10;
 
-tracking_range = 100;
+tracking_range = 150;
 
 randx = 0;
 randy = 0;
